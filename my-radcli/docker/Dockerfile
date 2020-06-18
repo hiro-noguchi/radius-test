@@ -4,7 +4,7 @@ WORKDIR /
 
 RUN apt update -y && apt install -y git vim autoconf libtool automake nettle-dev libgnutls28-dev abi-compliance-checker
 
-RUN git clone -b performance-test  https://github.com/hiro-noguchi/radcli.git
+RUN git clone -b v1.2  https://github.com/hiro-noguchi/radcli.git
 
 RUN ln -s /radcli/lib/.libs/libradcli.so.4 /lib/x86_64-linux-gnu/
 
