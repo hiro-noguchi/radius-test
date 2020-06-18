@@ -1,5 +1,7 @@
 # build
 
+`cd docker`
+
 `docker build . -t radtest:1.0`
 
 # run
