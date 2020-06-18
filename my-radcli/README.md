@@ -72,4 +72,29 @@ RUN git clone -b performance-test  https://github.com/hiro-noguchi/radcli.git
 
 - v1.2
 
-`./radexample 3600`
+`./radexample 3600
+
+実行例
+
+```
+# ./radexample 1
+start
+tv_sec=1592475546  tv_nsec=411403861
+2020/06/18 10:19:06.411403861
+tv_sec=1592475547  tv_nsec=93449806
+2020/06/18 10:19:07.093449806
+end
+sec:1
+tps:1000
+success:1000
+```
+
+```
+# ./radexample 5
+start
+〜〜省略〜〜
+end
+sec:5
+tps:1200
+success:6000
+```
