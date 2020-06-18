@@ -29,6 +29,17 @@ acctserver        XXX.XXX.XXX.XXX:1813
 XXX.XXX.XXX.XXX                             key
 ```
 
+- radcliのブランチやタグを変更する場合は、Dockerfileを変更すること
+
+`vim docker/Dockerfile`
+
+```
+〜〜省略〜〜
+
+RUN git clone -b performance-test  https://github.com/hiro-noguchi/radcli.git
+
+〜〜省略〜〜
+```
 
 # build
 
