@@ -57,13 +57,19 @@ RUN git clone -b performance-test  https://github.com/hiro-noguchi/radcli.git
 
 `cd docker`
 
-`docker build . -t my-radcli:1.0`
+`docker build . -t my-radcli:1.2`
 
 
 # run
 
-`docker run -it my-radcli:1.0 /bin/bash`
+`docker run -it my-radcli:1.2 /bin/bash`
 
 `cd /radcli/src/.libs`
 
+- v1.0-v1.1
+
 `./radexample`
+
+- v1.2
+
+`./radexample 3600`
