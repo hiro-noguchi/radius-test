@@ -2,7 +2,7 @@
 
 - 認証情報を変更する場合
 
-`vim radius-test/freeradius/docker/freeradius-file/authorize`
+`vim docker/freeradius-file/authorize`
 
 ```
 username00000 Cleartext-Password := "password00000"
@@ -13,7 +13,7 @@ username00002 Cleartext-Password := "password00002"
 
 - 認証キーやアクセスもとネットワークを変更する場合
 
-`vim radius-test/freeradius/docker/freeradius-file/clients.conf`
+`vim docker/freeradius-file/clients.conf`
 
 ```
 client localnet {
@@ -24,6 +24,8 @@ client localnet {
 ```
 
 # build
+
+`cd docker`
 
 `docker build . -t freeradius:1.0`
 
