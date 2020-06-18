@@ -49,6 +49,10 @@ RUN git clone -b performance-test  https://github.com/hiro-noguchi/radcli.git
 
 `RUN git clone -b v1.1  https://github.com/hiro-noguchi/radcli.git`
 
+- v1.2 : コマンドライン引数で実行秒数を指定可能　(例)./radexample.c 3600
+
+`RUN git clone -b v1.2  https://github.com/hiro-noguchi/radcli.git`
+
 # build
 
 `cd docker`
