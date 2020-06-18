@@ -41,6 +41,14 @@ RUN git clone -b performance-test  https://github.com/hiro-noguchi/radcli.git
 〜〜省略〜〜
 ```
 
+- v1.0 : 1000パケット送信、ベース版
+
+`RUN git clone -b v1.0  https://github.com/hiro-noguchi/radcli.git`
+
+- v1.1 : 1000パケット送信、軽量化版
+
+`RUN git clone -b v1.1  https://github.com/hiro-noguchi/radcli.git`
+
 # build
 
 `cd docker`
