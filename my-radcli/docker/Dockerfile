@@ -1,16 +1,22 @@
 FROM ubuntu:16.04
 
+WORKDIR /
+
 RUN apt update -y && apt install -y git vim autoconf libtool automake nettle-dev libgnutls28-dev abi-compliance-checker
 
-RUN git clone https://github.com/hiro-noguchi/radcli.git
-RUN git clone https://github.com/hiro-noguchi/radius-test.git
+RUN git clone -b performance-test  https://github.com/hiro-noguchi/radcli.git
 
 RUN ln -s /radcli/lib/.libs/libradcli.so.4 /lib/x86_64-linux-gnu/
 
-RUN ln -s /radius-test/my-radcli/my-radcli-file /usr/local/etc/radcli
+RUN mkdir /usr/local/etc/radcli
 
-RUN cd /radcli
+WORKDIR radcli
 
-RUN ./autogen.sh
+RUN /bin/bash autogen.sh
 
 RUN make
+
+ADD my-radcli-file/dictionary /usr/local/etc/radcli/
+ADD my-radcli-file/radcli.conf /usr/local/etc/radcli/
+ADD my-radcli-file/servers /usr/local/etc/radcli/
+
